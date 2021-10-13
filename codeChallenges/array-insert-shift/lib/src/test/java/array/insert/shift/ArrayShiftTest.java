@@ -13,7 +13,6 @@ class ArrayShiftTest {
     }
     @Test public void arrayShift(){
         ArrayShift arrayShift = new ArrayShift();
-
         //test shift inset array
         int[] evenArray={20,40,80,100};
         int[] oddArray={20,40,80,120,140};
