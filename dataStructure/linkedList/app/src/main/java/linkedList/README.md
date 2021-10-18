@@ -21,3 +21,73 @@ return anything, it is a public method.
 in Linked List, in this method it will return true or false, it is a public method.
 
 `toString` build in method to print the data in class
+
+# Challenge Summary
+Extend a Linked List to allow various insertion methods like :
+1- append
+2- insert after
+3- insert before
+
+## Whiteboard Process
+![](WhiteboardLab6.PNG)
+
+## Approach & Efficiency
+`append` bigO(n)
+`insertAfter` bigO(n)
+`insertBefore` bigO(n)
+
+## Solution
+
+~~~java
+    //add a new node to the end of the LinedList
+public void append(T value){
+        Node node =new Node(value);
+        Node current =head;
+        if(current ==null){
+        head=node;
+        return;
+        }
+        while (current.next != null){
+        current = current.next;
+        }
+        current.next=node;
+        }
+
+// add a node after specific node
+public void insertAfter(T value ,T newValue){
+        Node current =head;
+        Node node =new Node(newValue);
+        if (current ==null){
+        head=node;
+        return;
+        }
+        while (current != null){
+        if (current.value.equals(value)){
+        node.next=current.next;
+        current.next=node;
+        }
+        current=current.next;
+        }
+        }
+
+//add a node before specific value
+public void insertBefore(T beforeNodeValue, T newNodeValue) {
+        Node newNode = new Node(newNodeValue);
+        if (head == null) {
+        head = newNode;
+        } else if (head.value.equals(beforeNodeValue)) {
+        insert(newNodeValue);
+        } else {
+        Node beforeNode = head;
+        Node currentNode = head.next;
+        while (!currentNode.value.equals(beforeNodeValue)) {
+        beforeNode = beforeNode.next;
+        currentNode = currentNode.next;
+        }
+        newNode.next=beforeNode.next;
+        beforeNode.next=newNode;
+        }
+        }
+~~~
+
+run me code use ./gradlew test

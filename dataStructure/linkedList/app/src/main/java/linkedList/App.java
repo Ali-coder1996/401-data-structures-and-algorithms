@@ -10,6 +10,18 @@ public class App {
         linkedList.insert(5);
         linkedList.insert(4);
         linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
+        linkedList.insert(0);
+        linkedList.append(6);
+        linkedList.append(7);
+        linkedList.append(8);
+        linkedList.insertBefore(0,29);
+        linkedList.insertAfter(5,55);
+        linkedList.deleteNodeByKey(55);
+        linkedList.deleteNodeByKey(0);
+        System.out.println(linkedList.include(5));
         System.out.println(linkedList.toString());
+
     }
 }

@@ -36,4 +36,62 @@ class AppTest {
 
         assertEquals("{ 0 } -> { 2 } -> { 1 } -> Null",linkedList.toString());
     }
+    @Test public void testAppend(){
+        LinkedList linkedList =new LinkedList();
+        assertEquals("Null",linkedList.toString());
+
+        linkedList.append(1);
+        linkedList.append(2);
+        linkedList.append(3);
+        linkedList.append(4);
+        linkedList.append(5);
+
+        assertEquals("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> Null",linkedList.toString());
+    }
+    @Test public void testInsertAfter(){
+        LinkedList linkedList =new LinkedList();
+
+        linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
+
+        linkedList.insertAfter(3,31);
+
+        assertEquals("{ 1 } -> { 2 } -> { 3 } -> { 31 } -> Null",linkedList.toString());
+    }
+    @Test public void testInsertBefore(){
+        LinkedList linkedList =new LinkedList();
+
+        linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
+
+        linkedList.insertBefore(3,29);
+
+        assertEquals("{ 1 } -> { 2 } -> { 29 } -> { 3 } -> Null",linkedList.toString());
+
+        //add before the head
+        LinkedList linkedList1 =new LinkedList();
+
+        linkedList1.insert(2);
+        linkedList1.insert(1);
+        linkedList1.insert(0);
+
+        linkedList1.insertBefore(0,29);
+
+        assertEquals("{ 29 } -> { 0 } -> { 1 } -> { 2 } -> Null",linkedList1.toString());
+    }
+    @Test public void testDeleteByKey(){
+        LinkedList linkedList =new LinkedList();
+        linkedList.insert(4);
+        linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
+        linkedList.insert(0);
+
+        linkedList.deleteNodeByKey(3);
+
+        assertEquals("{ 0 } -> { 1 } -> { 2 } -> { 4 } -> Null",linkedList.toString());
+    }
+
 }
