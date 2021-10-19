@@ -93,5 +93,59 @@ class AppTest {
 
         assertEquals("{ 0 } -> { 1 } -> { 2 } -> { 4 } -> Null",linkedList.toString());
     }
+    @Test public void testKthFromEnd(){
+        //test Where k is greater than the length of the linked list
+        LinkedList linkedList =new LinkedList();
+        linkedList.insert(5);
+        linkedList.insert(4);
+        linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
+        linkedList.insert(0);
 
+        assertEquals("the k is greater that the length of the LinkedList",linkedList.kthFromEnd(7));
+
+        //test Where k and the length of the list are the same
+
+        LinkedList linkedList1 =new LinkedList();
+        linkedList1.insert(5);
+        linkedList1.insert(4);
+        linkedList1.insert(3);
+
+        assertEquals("the k is equal to the length of the LinedList you should provided number less than the length of linkedlist ",linkedList1.kthFromEnd(3));
+
+        //test Where k is not a positive integer
+        LinkedList linkedList2 =new LinkedList();
+        linkedList2.insert(9);
+        linkedList2.insert(5);
+        linkedList2.insert(52);
+
+        assertEquals("The number of k should be positive",linkedList2.kthFromEnd(-1));
+
+        //test Where the linked list is of a size 1
+        LinkedList linkedList3 =new LinkedList();
+        linkedList3.insert(77);
+
+        assertEquals(77,linkedList3.kthFromEnd(0));
+    }
+    @Test public void testFindMiddle(){
+        LinkedList linkedList =new LinkedList();
+        linkedList.insert(5);
+        linkedList.insert(4);
+        linkedList.append(8);
+        linkedList.append(2);
+        linkedList.insertBefore(2,77);
+
+        assertEquals(8,linkedList.printMiddle());
+    }
+    @Test public void testGetSizeOfTheLinkedList(){
+        LinkedList linkedList =new LinkedList();
+        linkedList.insert(5);
+        linkedList.insert(4);
+        linkedList.append(8);
+        linkedList.append(2);
+        linkedList.insertBefore(2,77);
+
+        assertEquals(5,linkedList.getCount());
+    }
 }

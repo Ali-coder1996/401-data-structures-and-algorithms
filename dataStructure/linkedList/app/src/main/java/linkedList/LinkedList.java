@@ -2,6 +2,7 @@ package linkedList;
 
 public class LinkedList<T> {
     Node<T> head;
+    private Object Exception;
 
     public LinkedList(){
         this.head=null;
@@ -139,17 +140,37 @@ public class LinkedList<T> {
 //
 //        current.next = next;  // Unlink the deleted node from list
 //    }
-//    public int getCount(){
-//        Node current =head;
-//        int count=0;
-//        if (head == null)
-//            return count;
-//        while (current !=null){
-//            current=current.next;
-//            count++;
-//        }
-//        return count;
-//    }
+    public int getCount(){
+        Node current =head;
+        int count=0;
+        if (head == null)
+            return count;
+        while (current !=null){
+            current=current.next;
+            count++;
+        }
+        return count;
+    }
+    public Object kthFromEnd(int k){
+        if (k <= -1){
+            return "The number of k should be positive";
+        }else if(k > getCount()){
+            return "the k is greater that the length of the LinkedList";
+        }else if(k == getCount()){
+            return "the k is equal to the length of the LinedList you should provided number less than the length of linkedlist ";
+        }
+        if(k>-1){
+            Node currentNode = head;
+            int index = getCount()-k-1;
+            for (int i =0; i<index;i++){
+                currentNode= currentNode.next;
+            }
+            return (int) currentNode.value;
+        }else {
+            return null;
+        }
+    }
+
 //    public int GetNth(int index){
 //        Node current =head;
 //        if (current == null)
@@ -159,12 +180,12 @@ public class LinkedList<T> {
 //        }
 //        return (int)current.value;
 //    }
-//    public int printMiddle(){
-//        Node current =head;
-//        if(current ==null)
-//            return -1;
-//        for (int i=0; current !=null && i<getCount()/2;i++)
-//            current=current.next;
-//        return (int)current.value;
-//    }
+    public int printMiddle(){
+        Node current =head;
+        if(current ==null)
+            return -1;
+        for (int i=0; current !=null && i<getCount()/2;i++)
+            current=current.next;
+        return (int)current.value;
+    }
 }

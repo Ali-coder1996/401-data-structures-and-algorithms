@@ -16,12 +16,17 @@ public class App {
         linkedList.append(6);
         linkedList.append(7);
         linkedList.append(8);
-        linkedList.insertBefore(0,29);
-        linkedList.insertAfter(5,55);
-        linkedList.deleteNodeByKey(55);
-        linkedList.deleteNodeByKey(0);
-        System.out.println(linkedList.include(5));
+        linkedList.append(9);
+        System.out.println(linkedList.getCount());
+//        linkedList.insertBefore(2,29);
+//        linkedList.insertAfter(5,55);
+//        linkedList.deleteNodeByKey(55);
+//        linkedList.deleteNodeByKey(0);
+//        System.out.println(linkedList.include(5));
         System.out.println(linkedList.toString());
+        System.out.println(linkedList.kthFromEnd(9));
+        System.out.println(linkedList.printMiddle());
+
 
     }
 }

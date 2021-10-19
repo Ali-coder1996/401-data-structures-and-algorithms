@@ -91,3 +91,37 @@ public void insertBefore(T beforeNodeValue, T newNodeValue) {
 ~~~
 
 run me code use ./gradlew test
+
+# code challenge7
+
+# Challenge Summary
+write method to get the value from the End of the LinkedList......
+
+## Whiteboard Process
+![](whiteboardLab7.PNG)
+
+## Approach & Efficiency
+`kthFromEnd` bigO(n)
+
+## Solution
+~~~java
+    public Object kthFromEnd(int k){
+        if (k <= -1){
+        return "The number of k should be positive";
+        }else if(k > getCount()){
+        return "the k is greater that the length of the LinkedList";
+        }else if(k == getCount()){
+        return "the k is equal to the length of the LinedList you should provided number less than the length of linkedlist ";
+        }
+        if(k>-1){
+        Node currentNode = head;
+        int index = getCount()-k-1;
+        for (int i =0; i<index;i++){
+        currentNode= currentNode.next;
+        }
+        return (int) currentNode.value;
+        }else {
+        return null;
+        }
+        }
+~~~
