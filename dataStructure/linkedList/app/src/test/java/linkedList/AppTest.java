@@ -148,4 +148,22 @@ class AppTest {
 
         assertEquals(5,linkedList.getCount());
     }
+    @Test public void testZipMethod(){
+        LinkedList linkedList1 =new LinkedList();
+        linkedList1.append(1);
+        linkedList1.append(3);
+        linkedList1.append(5);
+        linkedList1.append(7);
+        linkedList1.append(9);
+
+        LinkedList linkedList2 =new LinkedList();
+        linkedList2.append(2);
+        linkedList2.append(4);
+        linkedList2.append(6);
+        linkedList2.append(8);
+        linkedList2.append(10);
+
+
+        assertEquals("{ 1 } -> { 2 } -> { 3 } -> { 4 } -> { 5 } -> { 6 } -> { 7 } -> { 8 } -> { 9 } -> { 10 } -> Null", linkedList1.zipLists(linkedList1,linkedList2));
+    }
 }

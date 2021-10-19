@@ -125,3 +125,35 @@ write method to get the value from the End of the LinkedList......
         }
         }
 ~~~
+
+# code challenge 8
+
+# Challenge Summary
+write function called zip that take to argument LinkedList and return Zip the two linked lists together into one
+
+## Whiteboard Process
+![](WhiteboardLab8.PNG)
+
+## Approach & Efficiency
+`zip` bigO(n)
+
+## Solution
+~~~java
+    public String zipLists(LinkedList list1, LinkedList list2){
+        Node list1Current = list1.head;
+        Node list2Current = list2.head;
+        LinkedList linkedList = new LinkedList();
+        while (list1Current != null || list2Current != null){
+        if(list1Current != null){
+        linkedList.append(list1Current.value);
+        list1Current = list1Current.next;
+        }
+        if( list2Current != null){
+        linkedList.append(list2Current.value);
+        list2Current = list2Current.next;
+        }
+        }
+        return  linkedList.toString();
+        };
+~~~
+
