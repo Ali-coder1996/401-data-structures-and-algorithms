@@ -1,5 +1,8 @@
 package linkedList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class LinkedList<T> {
     Node<T> head;
     private Object Exception;
@@ -209,6 +212,36 @@ public class LinkedList<T> {
             }
         }
         return  linkedList.toString();
-    };
+    }
+    public void removeFirst(){
+        head=head.next;
+    }
+    public void reverse() {
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while (current != null) {
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+    public boolean isPalindrome() {
+        List<Integer> values = new ArrayList<Integer>();
+        Node current =head;
+        while(current != null)
+        {
+            values.add((int)current.value);
+            current = current.next;
+        }
+        for(int i= 0; i < values.size();i++){
+            if(values.get(i) != values.get(values.size()-i-1)){
+                return false;
+            }
+        }
+        return true;
+    }
 
 }

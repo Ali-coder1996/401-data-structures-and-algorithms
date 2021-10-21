@@ -7,15 +7,18 @@ public class App {
 
     public static void main(String[] args) {
         LinkedList<Integer> linkedList =new LinkedList<>();
-        linkedList.insert(5);
-        linkedList.insert(4);
-        linkedList.insert(3);
-        linkedList.insert(2);
-        linkedList.insert(1);
-        linkedList.append(6);
-        linkedList.append(7);
-        linkedList.append(8);
-        linkedList.append(9);
+//        linkedList.insert(5);
+//        linkedList.insert(4);
+//        linkedList.insert(3);
+//        linkedList.insert(2);
+//        linkedList.insert(1);
+//        linkedList.append(6);
+//        linkedList.append(7);
+//        linkedList.append(8);
+//        linkedList.append(9);
+//        linkedList.removeFirst();
+//        linkedList.reverse();
+//        System.out.println();
 //        System.out.println(linkedList.getCount());
 //        linkedList.insertBefore(2,29);
 //        linkedList.insertAfter(5,55);
@@ -43,7 +46,15 @@ public class App {
         linkedList2.append(10);
 
 
-        System.out.println(linkedList1.zipLists(linkedList1,linkedList2));
-        System.out.println(linkedList2.zipLists(linkedList2,linkedList1));
+//        System.out.println(linkedList1.zipLists(linkedList1,linkedList2));
+//        System.out.println(linkedList2.zipLists(linkedList2,linkedList1));
+
+        linkedList.insert(1);
+        linkedList.insert(0);
+        linkedList.append(1);
+        linkedList.append(0);
+        boolean x= linkedList.isPalindrome();
+        System.out.println(x);
+        System.out.println(linkedList.toString());
     }
 }
