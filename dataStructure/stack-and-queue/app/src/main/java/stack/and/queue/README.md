@@ -13,7 +13,7 @@ Queue: A queue is a linear data structure in which elements can be inserted only
 
 ## API
 
-#stack 
+# stack 
 `push:` adds a new node with that value to the top of the stack with an O(1) Time performance.
 `pop:` Returns: the value from node from the top of the stack
 `peek:` Returns: Value of the node located at the top of the stack
