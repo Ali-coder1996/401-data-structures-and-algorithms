@@ -18,6 +18,9 @@ public class Stack<T> {
 
     //pop from the stack
     public <T> T pop(){
+        if (top ==null){
+            return null;
+        }
         T value= (T) top.value;
         try {
             Node current=top;

@@ -3,10 +3,12 @@
  */
 package stack.and.queue;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StackTest {
+    @DisplayName("push to the stack")
     @Test public void testForPush(){
         Stack stack=new Stack();
 
@@ -19,8 +21,11 @@ class StackTest {
         stack.push(3);
         assertEquals(3,stack.top.value);
     }
+    @DisplayName("pop to the stack")
     @Test public void testForPop(){
         Stack stack=new Stack();
+
+        assertNull(stack.pop());
 
         stack.push(5);
         stack.push(4);
@@ -34,6 +39,7 @@ class StackTest {
         assertEquals(2,stack.getSize());
         assertEquals(4,stack.pop());
     }
+    @DisplayName("return the top of the stack")
     @Test public void testPeek(){
         Stack stack =new Stack();
         //before add
@@ -46,6 +52,7 @@ class StackTest {
 
         assertEquals(3,stack.peek());
     }
+    @DisplayName("return ture Or false if the stack is empty")
     @Test public void testIsEmpty(){
         Stack stack =new Stack();
 
