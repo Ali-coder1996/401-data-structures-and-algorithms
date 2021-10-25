@@ -42,3 +42,31 @@ dequeue method => Big O = n.
 ## Solution
 `enqueue:` adds a new node with that value to the back of the queue with an O(1) Time performance.
 `dequeue:` Returns: the value from node from the front of the queue
+
+
+# code challenge 12
+
+# Challenge Summary
+To implement stack & queue in this challenge we need two classes: `Animal`, and "`AnimalShelter`".
+
+## Whiteboard Process
+![](whiteboardAnimalShlter.PNG)
+
+## Approach & Efficiency
+enqueue method => Big O = n.
+dequeue method => Big O = n.
+
+## Solution
+
+Create a class called Animal to represent an animal in the shelter. 
+
+Create a class called Dogs that extends Animal to represent a dog.
+
+Create a class called Cats that extends Animal to represent a cat.
+
+Create a class called AnimalShelter which holds only dogs and cats, The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+
+enqueue(animal): adds animal to the shelter, Animal can be either a dog, or a cat object, This method has constant space and time complexity.
+
+dequeue(pref): returns either a dog or a cat, If pref is not "dog" or "cat" then return.

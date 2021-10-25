@@ -33,5 +33,16 @@ public class App {
         T pseValue= (T) pseudoQueue.dequeue();
         System.out.println(pseValue);
         System.out.println(pseudoQueue.toString());
+
+        //
+        Cats cat = new Cats("Mew",2.4,"anything","anything");
+        Dogs dog = new Dogs("anything",2.5,"anything","anything");
+        AnimalShelter animalShelter = new AnimalShelter();
+        animalShelter.enqueue(cat);
+        animalShelter.enqueue(dog);
+        animalShelter.dequeue("cat");
+//        animalShelter.dequeue("dog");
+        System.out.println(animalShelter);
+
     }
 }
