@@ -23,6 +23,9 @@ public class Queue<T>{
     }
     //dequeue from the queue
     public <T> T deQueue(){
+        if (front ==null){
+            return null;
+        }
         Node temp =front;
         front=front.next;
         temp.next=null;

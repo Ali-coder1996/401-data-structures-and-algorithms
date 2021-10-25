@@ -13,7 +13,7 @@ Queue: A queue is a linear data structure in which elements can be inserted only
 
 ## API
 
-#stack 
+# stack 
 `push:` adds a new node with that value to the top of the stack with an O(1) Time performance.
 `pop:` Returns: the value from node from the top of the stack
 `peek:` Returns: Value of the node located at the top of the stack
@@ -24,3 +24,21 @@ Queue: A queue is a linear data structure in which elements can be inserted only
 `dequeue:` Returns: the value from node from the front of the queue
 `peek:` Returns: Value of the node located at the front of the queue
 `is empty:` Returns: Boolean indicating whether or not the queue is empty
+
+# code challenge 11
+
+# Challenge Summary
+Implement a Queue using two Stacks, Create a new PseudoQueue class. Do not use an existing Queue.
+Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below),
+but will internally only utilize 2 Stack objects.
+
+## Whiteboard Process
+![](whiteboardPseudoQueue.PNG)
+
+## Approach & Efficiency
+enqueue method => Big O = n.
+dequeue method => Big O = n.
+
+## Solution
+`enqueue:` adds a new node with that value to the back of the queue with an O(1) Time performance.
+`dequeue:` Returns: the value from node from the front of the queue

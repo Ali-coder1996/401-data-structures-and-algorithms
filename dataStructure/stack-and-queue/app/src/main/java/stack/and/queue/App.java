@@ -7,14 +7,14 @@ public class App {
 
     public static <T> void main(String[] args) {
         Stack<Integer> stack=new Stack<>();
-        stack.push(5);
-        stack.push(4);
-        stack.push(3);
+//        stack.push(5);
+//        stack.push(4);
+//        stack.push(3);
         T value = stack.pop();
         T peekValue = stack.peek();
         System.out.println(value);
-        System.out.println(peekValue);
-        System.out.println(stack.toString());
+//        System.out.println(peekValue);
+//        System.out.println(stack.toString());
 
         //add queue method
         Queue<Integer> queue =new Queue<>();
@@ -24,5 +24,14 @@ public class App {
         T valueOfDeQueue=queue.deQueue();
         System.out.println(valueOfDeQueue);
         System.out.println(queue.toString());
+
+        //
+        PseudoQueue pseudoQueue =new PseudoQueue();
+        pseudoQueue.enqueue(3);
+        pseudoQueue.enqueue(4);
+        pseudoQueue.enqueue(5);
+        T pseValue= (T) pseudoQueue.dequeue();
+        System.out.println(pseValue);
+        System.out.println(pseudoQueue.toString());
     }
 }
