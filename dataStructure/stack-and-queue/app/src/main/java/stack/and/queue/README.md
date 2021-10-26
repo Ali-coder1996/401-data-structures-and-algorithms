@@ -70,3 +70,30 @@ Implement the following methods:
 enqueue(animal): adds animal to the shelter, Animal can be either a dog, or a cat object, This method has constant space and time complexity.
 
 dequeue(pref): returns either a dog or a cat, If pref is not "dog" or "cat" then return.
+
+# code challenge 13
+
+# Challenge Summary
+This function checks that brackets ('(', '[', ") in a code file are closed appropriately.
+The function accepts a text as input and returns a boolean indicating if the brackets are appropriately closed.
+
+## Whiteboard Process
+![](whiteboardValditorBracket.PNG)
+
+## Approach & Efficiency
+`validateBrackets` bigO(1)
+
+## Solution
+1-Create a stack to store each brace.
+
+2-Traverse the string one character at a time.
+
+3-Store each opening brace on the stack.
+
+4-When a closing brace is encountered, pop the top brace off the stack.
+
+5-If the closing brace does not match the popped opening brace, return false.
+
+6-If the stack is not empty after traversal, return false.
+
+7-If the stack is empty after traversal, return true.
