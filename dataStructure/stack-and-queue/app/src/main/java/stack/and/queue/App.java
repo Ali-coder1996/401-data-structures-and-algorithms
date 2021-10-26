@@ -44,5 +44,11 @@ public class App {
 //        animalShelter.dequeue("dog");
         System.out.println(animalShelter);
 
+        //
+        ValidateBrackets validateBrackets=new ValidateBrackets();
+        boolean test =validateBrackets.validateBrackets("()[[Extra Characters]]");
+        boolean test1 =validateBrackets.validateBrackets("{}{Code[}[Fellows](())");
+        System.out.println(test);
+        System.out.println(test1);
     }
 }
