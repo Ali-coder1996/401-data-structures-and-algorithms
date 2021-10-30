@@ -3,6 +3,9 @@
  */
 package stack.and.queue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
 
     public static <T> void main(String[] args) {
@@ -50,5 +53,16 @@ public class App {
         boolean test1 =validateBrackets.validateBrackets("{}{Code[}[Fellows](())");
         System.out.println(test);
         System.out.println(test1);
+
+        //
+        List<String> duck=new ArrayList<>();
+        duck.add("A");
+        duck.add("B");
+        duck.add("C");
+        duck.add("D");
+        duck.add("E");
+        DuckDuckGoose duckDuckGoose = new DuckDuckGoose();
+        duckDuckGoose.duckDuckGoosed(duck,3);
+
     }
 }
