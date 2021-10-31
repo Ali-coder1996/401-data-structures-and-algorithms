@@ -70,5 +70,17 @@ class AppTest {
         arr.add(50);
         assertEquals(arr,binarySearchTree.postOrder(binarySearchTree.root));
     }
+    @Test
+    public void ReturnMaxNumber() throws Exception {
+        BinarySearchTree binarySearchTree=new BinarySearchTree();
+        binarySearchTree.Add(50);
+        binarySearchTree.Add(30);
+        binarySearchTree.Add(20);
+        binarySearchTree.Add(40);
+        binarySearchTree.Add(70);
+        binarySearchTree.Add(60);
+        binarySearchTree.Add(80);
+        assertEquals(80,binarySearchTree.maximum());
+    }
 
 }
