@@ -27,3 +27,20 @@ Build all trees classes and methods from scratch
 * Class BinarySearchTree
     * `add()` insert in your tree u send just data.
     * `contains()` to get a `boolean` true or false after search in your tree
+  
+# code challenge 16
+
+# Challenge Summary
+Find the Maximum Value in a Binary Tree
+
+## Whiteboard Process
+![](whiteboardformax.png)
+## Approach & Efficiency
+- `Big O of O(n)`
+## Solution
+`git clone git@github.com:Ali-coder1996/401-data-structures-and-algorithms.git`
+`cd 401-data-structures-and-algorithms/tree`
+
+`gradlew run`
+`gradlew test`
+

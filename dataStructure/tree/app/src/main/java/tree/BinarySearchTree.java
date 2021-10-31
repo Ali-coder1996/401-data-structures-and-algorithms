@@ -2,7 +2,7 @@ package tree;
 
 public class BinarySearchTree<T> extends BinaryTree{
     private int nodeCount;
-
+    Integer max =null;
     public int getNodeCount() {
         return nodeCount;
     }
@@ -68,6 +68,39 @@ public class BinarySearchTree<T> extends BinaryTree{
             current = current.left;
         }
         traverse(current, key);
+    }
+    public int maximum() throws Exception {
+        //handling empty tree situation
+        if (root == null) {
+            throw new Exception("Exception: Empty tree *_*");
+        }
+        Node currentNode = root;
+        max = (Integer) currentNode.value;
+
+        if (currentNode.left != null) {
+            traverse(currentNode.left); // traverse left sub tree
+        }
+        if (currentNode.right != null) {
+            traverse(currentNode.right); // traverse right sub tree
+        }
+        return max;
+    }
+
+    /**
+     * traverse sub tree and find the max number
+     *
+     * @param node: the root of the sub tree
+     */
+    private void traverse(Node node) {
+        if ((Integer)node.value > max) {
+            max = (Integer) node.value;
+        }
+        if (node.left != null) {
+            traverse(node.left); // traverse left sub tree
+        }
+        if (node.right != null) {
+            traverse(node.right); // traverse right sub tree
+        }
     }
 
 }
