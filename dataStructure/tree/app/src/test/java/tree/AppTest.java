@@ -82,5 +82,17 @@ class AppTest {
         binarySearchTree.Add(80);
         assertEquals(80,binarySearchTree.maximum());
     }
+    @Test
+    public void breadthFirst()  {
+        BinarySearchTree binarySearchTree=new BinarySearchTree();
+        binarySearchTree.Add(50);
+        binarySearchTree.Add(30);
+        binarySearchTree.Add(20);
+        binarySearchTree.Add(40);
+        binarySearchTree.Add(70);
+        binarySearchTree.Add(60);
+        binarySearchTree.Add(80);
+        assertEquals(List.of(50,30,70,20,40,60,80),binarySearchTree.breadthFirst(binarySearchTree));
+    }
 
 }

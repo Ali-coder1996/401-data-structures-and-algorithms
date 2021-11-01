@@ -44,3 +44,19 @@ Find the Maximum Value in a Binary Tree
 `gradlew run`
 `gradlew test`
 
+# code challenge 17
+
+# Challenge Summary
+Write a function called breadth first
+and take argument tree and Return: list of all values in the tree, in the order they were encountered
+
+## Whiteboard Process
+![](whiteboardBreadfirst.png)
+
+## Approach & Efficiency
+`breadthFirst` bigO(n)
+
+## Solution
+
+`gradlew run`
+`gradlew test`

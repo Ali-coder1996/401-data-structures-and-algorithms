@@ -18,5 +18,6 @@ public class App {
         System.out.println(binarySearchTree.contains(90));
         System.out.println(binarySearchTree.contains(80));
         System.out.println(binarySearchTree.maximum());
+        System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
     }
 }
