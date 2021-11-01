@@ -1,5 +1,8 @@
 package tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinarySearchTree<T> extends BinaryTree{
     private int nodeCount;
     Integer max =null;
@@ -101,6 +104,24 @@ public class BinarySearchTree<T> extends BinaryTree{
         if (node.right != null) {
             traverse(node.right); // traverse right sub tree
         }
+    }
+    public List<Integer> breadthFirst(BinaryTree tree){
+        List<Integer> breadthFirstTreeList = new ArrayList<>();
+        List<Node>tempList = new ArrayList<>();
+
+        tempList.add(tree.root);
+
+        while (!tempList.isEmpty()){
+            breadthFirstTreeList.add((Integer) tempList.get(0).value);
+            if (tempList.get(0).left!=null){
+                tempList.add(tempList.get(0).left);
+            }
+            if (tempList.get(0).right!=null){
+                tempList.add(tempList.get(0).right);
+            }
+            tempList.remove(0);
+        }
+        return breadthFirstTreeList;
     }
 
 }
