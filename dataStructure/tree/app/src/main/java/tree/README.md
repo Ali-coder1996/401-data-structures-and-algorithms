@@ -60,3 +60,21 @@ and take argument tree and Return: list of all values in the tree, in the order 
 
 `gradlew run`
 `gradlew test`
+
+# code challenge 17
+
+# Challenge Summary
+Write a function called fizz buzz tree
+Arguments: k-ary tree
+Return: new k-ary tree
+
+## Whiteboard Process
+![](whiteboardFizzBuzzpng.PNG)
+
+## Approach & Efficiency
+`FizzBuzz` bigO(n)
+
+## Solution
+
+`gradlew run`
+`gradlew test`
