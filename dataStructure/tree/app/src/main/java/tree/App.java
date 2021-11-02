@@ -19,5 +19,15 @@ public class App {
         System.out.println(binarySearchTree.contains(80));
         System.out.println(binarySearchTree.maximum());
         System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
+        //
+        KAryTree karyTree = new KAryTree();
+        karyTree.addNode(new KArayNode("2", 3));
+//        karyTree.addNode(new KArayNode("90", 3));
+//        karyTree.addNode(new KArayNode("2", 3));
+//        karyTree.addNode(new KArayNode("33", 3));
+//        karyTree.addNode(new KArayNode("15", 3));
+//        karyTree.addNode(new KArayNode("8", 3));
+        System.out.println(karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+
     }
 }

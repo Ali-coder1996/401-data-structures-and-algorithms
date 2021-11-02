@@ -94,5 +94,30 @@ class AppTest {
         binarySearchTree.Add(80);
         assertEquals(List.of(50,30,70,20,40,60,80),binarySearchTree.breadthFirst(binarySearchTree));
     }
+    @Test
+    public void karyTree()  {
+        KAryTree karyTree = new KAryTree();
+        karyTree.addNode(new KArayNode("3", 3));
+        assertEquals("Fizz",karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+    }
+    @Test
+    public void karyTree1()  {
+        KAryTree karyTree = new KAryTree();
+        karyTree.addNode(new KArayNode("5", 3));
+        assertEquals("Buzz",karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+    }
+    @Test
+    public void karyTree2()  {
+        KAryTree karyTree = new KAryTree();
+        karyTree.addNode(new KArayNode("15", 3));
+        assertEquals("FizzBuzz",karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+    }
+    @Test
+    public void karyTree3()  {
+        KAryTree karyTree = new KAryTree();
+        karyTree.addNode(new KArayNode("2", 3));
+        assertEquals("2",karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+    }
+
 
 }
