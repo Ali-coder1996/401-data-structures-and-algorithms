@@ -123,5 +123,25 @@ public class BinarySearchTree<T> extends BinaryTree{
         }
         return breadthFirstTreeList;
     }
+    public int sumOfOddNumbers(BinaryTree tree) {
+        int sum = 0;
+        List<Node> tempList = new ArrayList<>();  // like Queue
+
+        tempList.add(tree.root);
+
+        while (!tempList.isEmpty()) {
+            if ((int)tempList.get(0).value % 2 != 0) {
+                sum += (int)tempList.get(0).value;
+            }
+            if (tempList.get(0).left != null) {
+                tempList.add(tempList.get(0).left);
+            }
+            if (tempList.get(0).right != null) {
+                tempList.add(tempList.get(0).right);
+            }
+            tempList.remove(0);
+        }
+        return sum;
+    }
 
 }
