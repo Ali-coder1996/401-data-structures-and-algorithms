@@ -3,33 +3,24 @@ package tree;
 import java.util.ArrayList;
 
 public class KArayNode {
-    private ArrayList<KArayNode> children;
-    private String key;
-    private int maxNrOfChildren;
+    public ArrayList<KArayNode> children = new ArrayList<>();
+    public Object value;
 
-    public KArayNode(String key, int maxNrOfChildren) {
-        this.key = key;
-        this.maxNrOfChildren = maxNrOfChildren;
-        this.children = new ArrayList<>();
+    public KArayNode(Object value) {
+        this.value = value;
     }
-
-    public ArrayList<KArayNode> getChildren() {
-        return children;
-    }
-
-    public void setChildren(ArrayList<KArayNode> children) {
+    public KArayNode(Object value,ArrayList children) {
+        this.value = value;
         this.children = children;
     }
-
-    public void addChild(KArayNode child) {
-        this.children.add(child);
+    public KArayNode() {
     }
 
-    public int getMaxNrOfChildren() {
-        return maxNrOfChildren;
-    }
-
-    public String getKey() {
-        return key;
+    @Override
+    public String toString() {
+        return
+                "children=" + children +
+                ", value=" + value +
+                '}';
     }
 }

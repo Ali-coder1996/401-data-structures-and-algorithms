@@ -3,31 +3,55 @@
  */
 package tree;
 
+import java.util.ArrayList;
+
 public class App {
 
     public static void main(String[] args) throws Exception {
         BinarySearchTree binarySearchTree =new BinarySearchTree();
-        binarySearchTree.Add(50);
-        binarySearchTree.Add(30);
-        binarySearchTree.Add(20);
-        binarySearchTree.Add(40);
-        binarySearchTree.Add(70);
-        binarySearchTree.Add(60);
-        binarySearchTree.Add(80);
-        System.out.println(binarySearchTree.postOrder(binarySearchTree.root));
-        System.out.println(binarySearchTree.contains(90));
-        System.out.println(binarySearchTree.contains(80));
-        System.out.println(binarySearchTree.maximum());
-        System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
+        binarySearchTree.root=new Node(8);
+        binarySearchTree.Add(3);
+        binarySearchTree.Add(10);
+        binarySearchTree.Add(1);
+        binarySearchTree.Add(6);
+        binarySearchTree.Add(14);
+        binarySearchTree.Add(4);
+        binarySearchTree.Add(7);
+        binarySearchTree.Add(13);
+        System.out.println(binarySearchTree.sumOfOddNumbers(binarySearchTree));
+        // add elements into the tree
+//        System.out.println(binarySearchTree.postOrder(binarySearchTree.root));
+//        System.out.println(binarySearchTree.contains(90));
+//        System.out.println(binarySearchTree.contains(80));
+//        System.out.println(binarySearchTree.maximum());
+//        System.out.println(binarySearchTree.breadthFirst(binarySearchTree));
         //
-        KAryTree karyTree = new KAryTree();
-        karyTree.addNode(new KArayNode("2", 3));
+//        KAryTree karyTree = new KAryTree();
+//        karyTree.addNode(new KArayNode("2", 3));
 //        karyTree.addNode(new KArayNode("90", 3));
 //        karyTree.addNode(new KArayNode("2", 3));
 //        karyTree.addNode(new KArayNode("33", 3));
 //        karyTree.addNode(new KArayNode("15", 3));
 //        karyTree.addNode(new KArayNode("8", 3));
-        System.out.println(karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+//        System.out.println(karyTree.fizzBuzzTree(karyTree.getRoot()).getRoot().getKey());
+
+        //
+        Tree tree = new Tree();
+        ArrayList<KArayNode> arrayList = new ArrayList<>();
+        arrayList.add(new KArayNode(5));
+        arrayList.add(new KArayNode(6));
+        KArayNode kAnyNode1 = new KArayNode(2);
+        KArayNode kAnyNode3 = new KArayNode(3);
+        KArayNode kAnyNode4 = new KArayNode(4);
+        kAnyNode4.children  =arrayList;
+        ArrayList<KArayNode> arrayList2 = new ArrayList<>();
+
+        tree.root = new KArayNode(1);
+        arrayList2.add(kAnyNode4);
+        arrayList2.add(kAnyNode3);
+        arrayList2.add(kAnyNode1);
+        tree.root.children =arrayList2;
+        System.out.println(FizzBuzzTree.fizzBuzzTree(tree));
 
     }
 }
