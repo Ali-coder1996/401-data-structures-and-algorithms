@@ -14,7 +14,7 @@
 | code challenge 27 BLOG|[whiteboard of BLOG](codeChallenges/class27/app/src/main/java/class27/BLOG.md)|[class27](codeChallenges/class27/app/src/main/java)|
 | code challenge 28|[whiteboard of class27](codeChallenges/class28/app/src/main/java/class28/whiteboardclass28.png)|[class28](ccodeChallenges/class28/app/src/main/java/class28)|
 | code challenge 28 BLOG|[whiteboard of BLOG](codeChallenges/class28/app/src/main/java/class28/BOLG.md)|[class28](codeChallenges/class28/app/src/main/java/class28)|
-
+| code challenge 30 |[whiteboard of Hash Table](dataStructure/hashtable/app/src/main/java/hashtable/README.md)|[class30](dataStructure/hashtable/app/src/main/java)|
 
 
 
