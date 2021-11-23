@@ -1,6 +1,7 @@
 package TreeIntersection;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class HashTable<K, V> {
@@ -10,6 +11,8 @@ public class HashTable<K, V> {
     private int size;
 
     public HashTable() {
+         List<K> keys = new ArrayList<>();
+
         hashTableBuckets = new ArrayList<>();
         bucketsNumber = 50;
         size = 0;
@@ -134,5 +137,10 @@ public class HashTable<K, V> {
         // key not found
         return null;
     }
+    private List<K> keys = new ArrayList<>();
+    public List<K> getKeys() {
+        return keys;
+    }
+
 
 }

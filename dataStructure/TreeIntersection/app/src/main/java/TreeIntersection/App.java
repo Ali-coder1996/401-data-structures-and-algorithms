@@ -34,6 +34,25 @@ public class App {
 
         System.out.println(treeIntersection(firstBinaryTree, secondBinaryTree));
 
+
+        HashTable<String, String> synonym = new HashTable<>();
+
+        synonym.add("fond", "enamored");
+        synonym.add("wrath", "anger");
+        synonym.add("diligent", "employed");
+        synonym.add("outfit", "garb");
+        synonym.add("guide", "usher");
+
+
+        HashTable<String, String> antonym = new HashTable<>();
+        antonym.add("fond", "averse");
+        antonym.add("wrath", "delight");
+        antonym.add("diligent", "idle");
+        antonym.add("guide", "follow");
+        antonym.add("flow", "jam");
+
+        System.out.println(leftJoin(synonym, antonym));
+
     }
 
     public static List<Integer> treeIntersection(BinarySearchTree firstBinaryTree,
@@ -61,5 +80,24 @@ public class App {
         }
 
         return repeatedValues;
+    }
+
+    public static ArrayList<ArrayList<String>> leftJoin(HashTable<String, String> synonym, HashTable<String, String> antonym) {
+        ArrayList<ArrayList<String>> results = new ArrayList<>();
+
+        if (synonym != null) {
+            List<String> synonymKeys = synonym.getKeys();
+
+            for (String synonymKey : synonymKeys) {
+                ArrayList<String> arrayList = new ArrayList<>();
+
+                arrayList.add(synonymKey); // add key for synonym
+                arrayList.add(synonym.get(synonymKey)); // add the value related to the key in synonym
+                arrayList.add(antonym.get(synonymKey)); // add the value related to the key in antonym
+
+                results.add(arrayList);
+            }
+        }
+        return results;
     }
 }
