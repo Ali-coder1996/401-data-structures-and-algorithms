@@ -2,19 +2,24 @@
 
 A hash table data structure was created from the ground up.
 
-## Challenge
+## code Challenge 30
 
 implementation from scratch
 
 ## Approach & Efficiency
 
-add: incorporates both the key and the value.
-
-get: returns the value from the table based on the key.
-
-hashCode: returns an index in the collection based on an arbitrary key.
-
-contains: returns the boolean (True / False) from the table based on the key.
+* `hash(K key)`
+    * T: O(1) there is no loop
+    * S: O(1) constant complexity – takes the same amount of space regardless of the input size
+* `add(K key, V value)`
+    * T: O(n) worst case : O(n) "when the all keys is hashed to the same index."
+    * S: O(n) where n is the size of the array of buckets.
+* `get(K key)`
+    * T: O(1) there is no loop
+    * S: O(1) constant complexity – takes the same amount of space regardless of the input size
+* `contains(K key)`
+    * T: O(1) there is no loop
+    * S: O(1) constant complexity – takes the same amount of space regardless of the input size
 
 ## API
 
@@ -41,7 +46,7 @@ In this challenge we create write a function repeatedWord that finds the first w
 
 ## Approach & Efficiency
 
-'repeatedWords' Big o (n^2) time complexity 
+'repeatedWords' Big o (n^2) time complexity  This can happen when we need to nest loops together to compare
 
 ## Solution
 
