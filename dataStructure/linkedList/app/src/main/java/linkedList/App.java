@@ -8,17 +8,17 @@ public class App {
     public static void main(String[] args) {
         LinkedList<Integer> linkedList =new LinkedList<>();
 //        linkedList.insert(5);
-//        linkedList.insert(4);
-//        linkedList.insert(3);
-//        linkedList.insert(2);
-//        linkedList.insert(1);
+        linkedList.insert(4);
+        linkedList.insert(3);
+        linkedList.insert(2);
+        linkedList.insert(1);
 //        linkedList.append(6);
 //        linkedList.append(7);
 //        linkedList.append(8);
 //        linkedList.append(9);
 //        linkedList.removeFirst();
 //        linkedList.reverse();
-//        System.out.println();
+        System.out.println(linkedList.printMiddle());
 //        System.out.println(linkedList.getCount());
 //        linkedList.insertBefore(2,29);
 //        linkedList.insertAfter(5,55);
