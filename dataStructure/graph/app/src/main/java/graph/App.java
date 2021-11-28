@@ -11,5 +11,30 @@ public class App {
         Vertex outputAdd = graph.addNode(vertex);
         System.out.println(outputAdd);
 
+
+        //
+        BreadthFirst graphs = new BreadthFirst();
+        Vertex Pandora = new Vertex("Pandora");
+        graphs.addNode(Pandora);
+        Vertex Arendelle = new Vertex("Arendelle");
+        graphs.addNode(Arendelle);
+        Vertex Metroville = new Vertex("Metroville");
+        graphs.addNode(Metroville);
+        Vertex Monstroplolis = new Vertex("Monstroplolis");
+        graphs.addNode(Monstroplolis);
+        Vertex Narnia = new Vertex("Narnia");
+        graphs.addNode(Narnia);
+        Vertex Naboo = new Vertex("Naboo");
+        graphs.addNode(Naboo);
+
+        graphs.addEdge(Pandora,Arendelle,0);
+        graphs.addEdge(Arendelle,Metroville,0);
+        graphs.addEdge(Arendelle,Monstroplolis,0);
+        graphs.addEdge(Metroville,Monstroplolis,0);
+        graphs.addEdge(Metroville,Narnia,0);
+        graphs.addEdge(Metroville,Naboo,0);
+        graphs.addEdge(Monstroplolis,Naboo,0);
+        graphs.addEdge(Narnia,Naboo,0);
+        System.out.println(graphs.breadthFirstMethod(Pandora));
     }
 }
