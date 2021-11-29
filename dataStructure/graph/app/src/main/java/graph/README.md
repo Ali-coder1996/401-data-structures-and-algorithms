@@ -53,3 +53,20 @@ Extend your graph object with a breadth-first traversal method that accepts a st
 ## Solution
 
 ![](whiteBoardBreadth.png)
+
+
+# Graphs BreadthFirst
+Implementing check  whether the full trip is possible with direct flights, and how much it would cost.
+
+## Challenge 37
+Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.
+## Approach & Efficiency
+#### Time complexity:-
+    * checkFullTripPossibility(): O(n^3) => Two for loops and While;
+
+#### Space complexity:
+    * checkFullTripPossibility(): O(n) => We have ArrayList.
+
+## Solution
+
+![](trip.png)

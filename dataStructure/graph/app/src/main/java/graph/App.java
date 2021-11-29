@@ -3,6 +3,8 @@
  */
 package graph;
 
+import java.util.ArrayList;
+
 public class App {
 
     public static void main(String[] args) {
@@ -36,5 +38,25 @@ public class App {
         graphs.addEdge(Monstroplolis,Naboo,0);
         graphs.addEdge(Narnia,Naboo,0);
         System.out.println(graphs.breadthFirstMethod(Pandora));
+
+        //
+
+        GetEdge getEdge = new GetEdge();
+        getEdge.addNode(Pandora);
+        getEdge.addNode(Arendelle);
+        getEdge.addNode(Metroville);
+        getEdge.addNode(Monstroplolis);
+        getEdge.addNode(Narnia);
+        getEdge.addNode(Naboo);
+
+        getEdge.addEdge(Pandora,Arendelle,150);
+        getEdge.addEdge(Pandora,Metroville,82);
+        getEdge.addEdge(Arendelle,Metroville,99);
+        ArrayList trip = new ArrayList();
+        trip.add("Metroville");
+        trip.add("Pandora");
+        trip.add("Arendelle");
+
+        System.out.println(GetEdge.checkFullTripPossibility(getEdge,trip));
     }
 }
