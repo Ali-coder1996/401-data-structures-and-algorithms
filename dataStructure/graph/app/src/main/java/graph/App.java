@@ -38,6 +38,8 @@ public class App {
         graphs.addEdge(Monstroplolis,Naboo,0);
         graphs.addEdge(Narnia,Naboo,0);
         System.out.println(graphs.breadthFirstMethod(Pandora));
+        System.out.println(DepthFirst.depthFirstGraph(graph,Pandora));
+
 
         //
 
