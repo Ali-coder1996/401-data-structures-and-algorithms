@@ -70,3 +70,23 @@ Write a function based on the specifications above, which takes in a graph, and 
 ## Solution
 
 ![](trip.png)
+
+
+# code challenge 38
+
+# Graphs DepthFirst
+Implementing Graphs DepthFirst.
+
+## Challenge
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+## Approach & Efficiency
+#### Time complexity:-
+    * depthFirstGraph(): O(n^2) => for loop and recartion;
+
+#### Space complexity:
+    * depthFirstGraph(): O(n) => We have ArrayList.
+
+## Solution
+
+![](depthfirst.png)
